@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Job</title>
+</head>
+<body>
+    <h1>Add a New Job</h1>
+    <form action="add_job/" method="post">
+        {% csrf_token %}
+        <label for="job_name">Job Name:</label>
+        <input type="text" id="job_name" name="job_name" required><br><br>
+
+        <label for="schedule_interval">Schedule Interval:</label>
+        <select id="schedule_interval" name="schedule_interval">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select><br><br>
+
+        <button type="submit">Add Job</button>
+    </form>
+
+</body>
+</html>
